@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#03050b" />
+  <meta name="description" content="《我爱你》— 一封没有寄出的信，穿过墨海与月光。A procedural motion-graphics music film." />
+  <title>我爱你 · A LETTER TO THE MOON</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <main id="app" class="app">
+    <div id="stageShell" class="stage-shell">
+      <div id="stage" class="stage">
+        <canvas id="output" class="output" aria-label="音乐影像画面"></canvas>
+        <div class="stage-edge" aria-hidden="true"></div>
+
+        <div id="hud" class="hud" aria-hidden="false">
+          <div class="hud-top">
+            <div class="film-mark">
+              <span class="film-mark__cn">我爱你</span>
+              <span class="film-mark__en">A LETTER TO THE MOON</span>
+            </div>
+            <div class="hud-top__actions">
+              <button id="storyboardBtn" class="ghost-btn" type="button" aria-label="打开分镜">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10"/></svg>
+                <span>分镜</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="hud-bottom">
+            <button id="playBtn" class="icon-btn" type="button" aria-label="播放">
+              <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+              <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg>
+            </button>
+
+            <div class="transport">
+              <div id="timeline" class="timeline" role="slider" aria-label="播放进度" aria-valuemin="0" aria-valuemax="310" aria-valuenow="0" tabindex="0">
+                <div class="timeline__rail"><div id="timelineFill" class="timeline__fill"></div></div>
+                <div id="timelineTicks" class="timeline__ticks" aria-hidden="true"></div>
+                <div id="playhead" class="timeline__head" aria-hidden="true"></div>
+              </div>
+              <div class="transport__meta">
+                <span id="timecode" class="timecode">00:00 / 05:10</span>
+                <span class="transport__chapter" id="chapterLabel">序 · 墨起</span>
+              </div>
+            </div>
+
+            <div class="hud-bottom__actions">
+              <button id="ccBtn" class="icon-btn is-on" type="button" aria-label="字幕">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4zM7 11h3M14 11h3M7 14h4M13 14h4"/></svg>
+              </button>
+              <button id="soundBtn" class="icon-btn is-on" type="button" aria-label="静音">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10v4h3l4 3V7l-4 3zM16 9.5c1 .7 1.6 1.6 1.6 2.5s-.6 1.8-1.6 2.5M18.4 7c1.6 1.3 2.5 3 2.5 5s-.9 3.7-2.5 5"/></svg>
+                <span class="sound-slash" aria-hidden="true"></span>
+              </button>
+              <button id="fsBtn" class="icon-btn" type="button" aria-label="全屏">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="startScreen" class="start" aria-label="开场">
+      <div class="start__shade"></div>
+      <div class="start__inner">
+        <p class="start__kicker">WANG FEI&nbsp;&nbsp;·&nbsp;&nbsp;《潜流》&nbsp;&nbsp;·&nbsp;&nbsp;2009</p>
+        <div class="start__rule" aria-hidden="true"><i></i></div>
+        <h1 class="start__title" aria-label="我爱你">
+          <span>我</span><span>爱</span><span>你</span>
+        </h1>
+        <p class="start__en">A LETTER TO THE MOON</p>
+        <p class="start__sub">一封没有寄出的信，穿过墨海与月光。</p>
+        <button id="startBtn" class="start__btn" type="button">
+          <span class="start__btn-cn">进入潮汐</span>
+          <span class="start__btn-en">ENTER THE TIDE</span>
+        </button>
+        <p class="start__hint">请佩戴耳机 · 时长 05:10 · 含原创诗性字幕</p>
+      </div>
+      <div class="start__side" aria-hidden="true">墨潮&nbsp;&nbsp;·&nbsp;&nbsp;月信</div>
+      <div class="start__foot">
+        <span>AN INDEPENDENT VISUAL STUDY</span>
+        <span>24 FPS · 2.39:1</span>
+      </div>
+    </section>
+
+    <aside id="storyboard" class="board" aria-hidden="true" aria-label="分镜表">
+      <div class="board__head">
+        <div>
+          <p class="board__kicker">STORYBOARD</p>
+          <h2>分镜手记</h2>
+        </div>
+        <button id="boardClose" class="icon-btn board__close" type="button" aria-label="关闭分镜">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <p class="board__lead">墨滴是一个念头。信离开书写者，穿过记忆，最后成为海面上的一层光。</p>
+      <ol id="boardList" class="board__list"></ol>
+      <p class="board__note">字幕为原创诗行。正式歌词受版权保护，未内嵌；可在 <code>public/lyrics.json</code> 载入已授权文本。</p>
+    </aside>
+
+    <div id="loading" class="loading">
+      <div class="loading__inner">
+        <p class="loading__kicker">A LETTER TO THE MOON</p>
+        <p class="loading__title">研墨中</p>
+        <div class="loading__bar"><i id="loadingBar"></i></div>
+        <p class="loading__status" id="loadingStatus">正在铺开宣纸</p>
+      </div>
+    </div>
+
+    <div id="error" class="error" hidden>
+      <p class="error__kicker">CANNOT OPEN THE GATE</p>
+      <h2>这台设备暂时无法播放</h2>
+      <p id="errorMsg">请使用支持 WebGL2 的 Chrome 或 Edge，并开启硬件加速。</p>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="srSubtitles" class="sr-only" aria-live="polite"></div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

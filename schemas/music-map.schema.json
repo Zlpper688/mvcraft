@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mvcraft.dev/schemas/music-map.schema.json",
+  "title": "mvcraft music map",
+  "type": "object",
+  "required": ["duration", "fps", "sections"],
+  "properties": {
+    "duration": { "type": "number", "exclusiveMinimum": 0 },
+    "fps": { "type": "number", "exclusiveMinimum": 0 },
+    "tempo": { "type": "number", "exclusiveMinimum": 0 },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "start", "end", "energy"],
+        "properties": {
+          "name": { "type": "string" },
+          "start": { "type": "number", "minimum": 0 },
+          "end": { "type": "number", "minimum": 0 },
+          "energy": { "type": "number", "minimum": 0, "maximum": 1 },
+          "function": {
+            "type": "string",
+            "enum": ["intro", "verse", "pre-chorus", "chorus", "bridge", "drop", "outro"]
+          }
+        }
+      }
+    },
+    "onsets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t"],
+        "properties": {
+          "t": { "type": "number", "minimum": 0 },
+          "s": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    },
+    "silences": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [{ "type": "number" }, { "type": "number" }],
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "rms": { "type": "array", "items": { "type": "number" } },
+    "vocal": { "type": "array", "items": { "type": "number" } },
+    "flux": { "type": "array", "items": { "type": "number" } },
+    "centroid": { "type": "array", "items": { "type": "number" } },
+    "flatness": { "type": "array", "items": { "type": "number" } },
+    "bands": {
+      "type": "object",
+      "additionalProperties": { "type": "array", "items": { "type": "number" } }
+    }
+  }
+}

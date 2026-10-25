@@ -1,0 +1,73 @@
+{
+  "style": "ink-moon",
+  "palette": ["#060A16", "#0A1328", "#5C7C9E", "#E7EDF5", "#E8E0CF", "#C94535", "#C8A96B"],
+  "materials": ["paper", "ink", "silver", "wax"],
+  "forbidden": [
+    "plastic specular",
+    "saturated neon",
+    "lens flare",
+    "fast zoom",
+    "pure black #000000",
+    "full-saturation red backgrounds"
+  ],
+  "light": {
+    "direction": "top",
+    "kelvin": 5600,
+    "contrast": 0.7,
+    "volumetric": false
+  },
+  "lens": {
+    "focal": [35, 50, 85],
+    "shake": 0.035,
+    "maxRoll": 0.03
+  },
+  "type": {
+    "cjk": "Noto Serif SC",
+    "latin": "Cormorant Garamond",
+    "weights": [300, 400, 600],
+    "tracking": 0.08
+  },
+  "post": {
+    "bloom": 0.62,
+    "bloomThreshold": 0.76,
+    "grain": 0.022,
+    "vignette": 0.34,
+    "aberration": 0.0012,
+    "toneMapping": "ACES",
+    "note": "bloom strength is the in-engine value used by the reference implementation"
+  },
+  "transitions": ["cut", "fade", "dip", "ink", "iris", "flash"],
+  "references": [
+    {
+      "title": "墨潮 · 月信",
+      "note": "Internal visual study: paper, ink diffusion, silver moonlight, wax red as the only accent."
+    },
+    {
+      "title": "2000s Chinese art-house title design",
+      "note": "Restrained type, wide tracking, title emerging from the material rather than overlaid."
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-21",
+      "field": "light.contrast",
+      "from": 0.55,
+      "to": 0.7,
+      "reason": "Night sea shots lost separation from the sky; measured subject/background contrast was below 1.15x."
+    },
+    {
+      "date": "2026-10-22",
+      "field": "post.bloom",
+      "from": 0.45,
+      "to": 0.62,
+      "reason": "The moon and the wax seal needed more glow at 2.39:1; threshold raised from 0.72 to 0.76 to keep paper whites from blooming."
+    },
+    {
+      "date": "2026-10-24",
+      "field": "transitions",
+      "from": ["cut", "fade", "ink", "dip"],
+      "to": ["cut", "fade", "dip", "ink", "iris", "flash"],
+      "reason": "The mirror entrance needed an iris and the two impact moments needed a registered flash; both added to the art direction before implementation."
+    }
+  ]
+}

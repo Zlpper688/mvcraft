@@ -1,0 +1,25 @@
+{
+  "name": "letter-to-the-moon",
+  "private": true,
+  "version": "1.0.0",
+  "description": "mvcraft reference film: deterministic Three.js MV player",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "analyze": "python ../../tools/analyze_audio.py --input public/audio/song.mp3 --out public/analysis --fps 30",
+    "render": "node ../../tools/export.mjs --fps 24 --gl d3d11 --quality .96",
+    "render:sw": "node ../../tools/export.mjs --fps 24 --gl swiftshader --quality .96",
+    "qa:stills": "node ../../tools/qa-cdp.mjs --each-shot --out ../../out/example-qa",
+    "probe": "node ../../tools/probe.mjs",
+    "contact": "bash ../../tools/contact-sheet.sh"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.3"
+  }
+}

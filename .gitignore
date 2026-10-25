@@ -1,0 +1,32 @@
+node_modules/
+dist/
+out/
+shots/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+
+# Never commit user media by default
+public/audio/*
+!public/audio/README.md
+public/lyrics.json
+public/analysis/*.wav
+public/analysis/*.flac
+public/analysis/song.*
+*.mp3
+*.m4a
+*.mov
+*.mkv
+*.webm
+*.wav
+*.flac
+*.aiff
+*.psd
+*.blend1
+
+# Keep: example docs and its silent, same-length placeholder (not a song)
+!examples/**/public/audio/README.md
+!examples/letter-to-the-moon/public/audio/song.mp3
+!examples/**/public/analysis/analysis.json

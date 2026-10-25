@@ -1,0 +1,286 @@
+{
+  "title": "我爱你",
+  "titleEn": "A LETTER TO THE MOON",
+  "duration": 310.16,
+  "fps": 24,
+  "aspect": "2.39:1",
+  "style": "ink-moon",
+  "audio": {
+    "file": "public/audio/song.mp3",
+    "bpm": 72,
+    "loudnessTarget": -14
+  },
+  "sections": [
+    { "name": "序 · 墨起", "start": 0, "end": 19.1, "energy": 0.12, "function": "intro" },
+    { "name": "主歌一 · 海上", "start": 19.1, "end": 60.2, "energy": 0.38, "function": "verse" },
+    { "name": "副歌一 · 上升", "start": 60.2, "end": 104.04, "energy": 0.62, "function": "chorus" },
+    { "name": "息", "start": 104.04, "end": 110.33, "energy": 0.08, "function": "bridge" },
+    { "name": "主歌二 · 镜与雨", "start": 110.33, "end": 157.0, "energy": 0.46, "function": "verse" },
+    { "name": "副歌二 · 坠与星", "start": 157.0, "end": 205.0, "energy": 0.72, "function": "chorus" },
+    { "name": "桥段 · 月渡", "start": 205.0, "end": 254.0, "energy": 0.58, "function": "bridge" },
+    { "name": "终章 · 潮归", "start": 254.0, "end": 310.16, "energy": 0.35, "function": "outro" }
+  ],
+  "shots": [
+    {
+      "id": "ink-rise", "start": 0, "end": 19.1, "scene": "prologue", "view": "macro",
+      "name": "墨起", "nameEn": "INK, RISING", "function": "title",
+      "shot": "微距俯拍 · 15° 环绕 · 缓推 · 35→42mm",
+      "subject": "墨滴 / 水面 / 片名", "event": "墨滴落入水中，散成星云；片名从涟漪中心显影",
+      "entry": "黑场", "exit": "墨色填满画面", "direction": "in",
+      "transitionIn": { "type": "fade", "duration": 2.4 },
+      "qa": { "subjectScreenArea": 0.08, "maxMotion": 0.2, "priority": "high" }
+    },
+    {
+      "id": "sea-letter", "start": 19.1, "end": 31.2, "scene": "seaNight", "view": "low",
+      "name": "海 · 信", "nameEn": "THE LETTER", "function": "establish",
+      "shot": "贴水面低机位 · 跟拍前推 · 35mm",
+      "subject": "火漆信 / 红绳", "event": "信从画面右侧漂入，红绳在水面拖出细痕",
+      "entry": "从墨色涟漪中显影", "exit": "摇臂开始升起", "direction": "left",
+      "transitionIn": { "type": "ink", "duration": 1.4 },
+      "qa": { "subjectScreenArea": 0.09, "maxMotion": 0.22, "priority": "high" }
+    },
+    {
+      "id": "sea-moon", "start": 31.2, "end": 44.04, "scene": "seaNight", "view": "wide",
+      "name": "海 · 月", "nameEn": "THE MOON", "function": "breathe",
+      "shot": "广角侧拍 · 摇臂升起 30° · 半环绕 · 35mm",
+      "subject": "月亮 / 海面倒影", "event": "机位升起，信变得渺小；月亮与倒影把海面分成两半",
+      "entry": "承接低机位", "exit": "切纸鱼群", "direction": "up",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.04, "maxMotion": 0.25 }
+    },
+    {
+      "id": "fish-track", "start": 44.04, "end": 52.4, "scene": "fish", "view": "track",
+      "name": "字鱼", "nameEn": "PAPER FISH", "function": "follow",
+      "shot": "横向轨道跟拍 · 前景鱼群掠过 · 50mm",
+      "subject": "纸鱼群 / 信札", "event": "信纸化成鳐鱼群，围绕信札游弋",
+      "entry": "墨色溶解", "exit": "推近纸纤维", "direction": "right",
+      "transitionIn": { "type": "ink", "duration": 1.2 },
+      "qa": { "subjectScreenArea": 0.1, "maxMotion": 0.3 }
+    },
+    {
+      "id": "fish-close", "start": 52.4, "end": 60.2, "scene": "fish", "view": "close",
+      "name": "字鱼 · 近", "nameEn": "WORDS ALIVE", "function": "detail",
+      "shot": "50mm 近景环绕 · 浅景深",
+      "subject": "纸纤维 / 墨迹 / 红印", "event": "近景里纸纤维与墨迹若隐若现；红印在鱼群中央呼吸",
+      "entry": "同场景切近景", "exit": "切纸阶", "direction": "right",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.12, "maxMotion": 0.18 }
+    },
+    {
+      "id": "stairs-wide", "start": 60.2, "end": 67.7, "scene": "stairs", "view": "wide",
+      "name": "纸阶", "nameEn": "PAPER STEPS", "function": "establish",
+      "shot": "广角仰拍 · 摇臂沿阶上升 · 28mm",
+      "subject": "纸阶 / 月孔", "event": "纸页悬成螺旋阶梯，红绳扶手通往顶端的月孔",
+      "entry": "墨色溶解", "exit": "跟随信封上升", "direction": "up",
+      "transitionIn": { "type": "ink", "duration": 1.2 },
+      "qa": { "subjectScreenArea": 0.15, "maxMotion": 0.28, "priority": "high" }
+    },
+    {
+      "id": "stairs-follow", "start": 67.7, "end": 74.04, "scene": "stairs", "view": "follow",
+      "name": "纸阶 · 随", "nameEn": "ASCENT", "function": "follow",
+      "shot": "35mm 跟随 · 轻微侧倾",
+      "subject": "信封 / 纸页边缘", "event": "跟随信封上升，纸张依次翻边，光斑从页缝漏下",
+      "entry": "承接仰拍", "exit": "切红线", "direction": "up",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.1, "maxMotion": 0.3 }
+    },
+    {
+      "id": "threads-orbit", "start": 74.04, "end": 89.0, "scene": "threads", "view": "orbit",
+      "name": "红线", "nameEn": "RED THREADS", "function": "detail",
+      "shot": "85mm 长焦环绕 · 压缩空间",
+      "subject": "火漆信 / 放射红线 / 纸签", "event": "百缕红线从信札中心放射，纸签与结在虚空轻响",
+      "entry": "墨色溶解", "exit": "穿越红线", "direction": "right",
+      "transitionIn": { "type": "ink", "duration": 1.2 },
+      "qa": { "subjectScreenArea": 0.1, "maxMotion": 0.22, "priority": "high" }
+    },
+    {
+      "id": "threads-dive", "start": 89.0, "end": 104.04, "scene": "threads", "view": "dive",
+      "name": "红线 · 穿", "nameEn": "THROUGH", "function": "follow",
+      "shot": "手持感穿越 · 前景红线掠过 · 35mm",
+      "subject": "火漆印", "event": "穿过红线丛林逼近火漆印；所有线在强拍上同时震颤",
+      "entry": "同场景切穿越机位", "exit": "突然静止", "direction": "in",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.12, "maxMotion": 0.42, "priority": "high" }
+    },
+    {
+      "id": "breath", "start": 104.04, "end": 110.33, "scene": "drop", "view": "hold",
+      "name": "息", "nameEn": "A BREATH", "function": "breathe", "still": true,
+      "shot": "微距固定 · 极缓推进 · 100mm",
+      "subject": "悬停的水滴 / 失焦的信", "event": "一切安静；一滴水悬在红线上方，远处信札失焦",
+      "entry": "暗场下沉", "exit": "镜面横移", "direction": "static",
+      "transitionIn": { "type": "dip", "duration": 1.8 },
+      "qa": { "subjectScreenArea": 0.03, "maxMotion": 0.04, "priority": "high" }
+    },
+    {
+      "id": "mirror-glide", "start": 110.33, "end": 124.3, "scene": "mirror", "view": "glide",
+      "name": "镜我", "nameEn": "THE MIRROR", "function": "establish",
+      "shot": "贴水面横移 · 倒影完整 · 50mm",
+      "subject": "黑镜水面 / 银月倒影 / 纸剪影", "event": "黑镜倒映银月与纸剪影；信悬在镜上，像一句未落地的话",
+      "entry": "圆形开镜", "exit": "进入镜后", "direction": "left",
+      "transitionIn": { "type": "iris", "duration": 1.5 },
+      "qa": { "subjectScreenArea": 0.08, "maxMotion": 0.2, "priority": "high" }
+    },
+    {
+      "id": "mirror-enter", "start": 124.3, "end": 134.04, "scene": "mirror", "view": "enter",
+      "name": "镜我 · 入", "nameEn": "BEHIND THE GLASS", "function": "follow",
+      "shot": "下潜进入 · 空间翻转 · 35mm",
+      "subject": "信的倒影", "event": "镜头穿过镜面进入倒影世界；物理规则反转",
+      "entry": "承接横移", "exit": "镜面炸裂", "direction": "in",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.1, "maxMotion": 0.35 }
+    },
+    {
+      "id": "mirror-shatter", "start": 134.04, "end": 144.04, "scene": "mirror", "view": "shatter",
+      "name": "镜碎", "nameEn": "SHATTER", "function": "impact",
+      "shot": "甩镜 + 下坠 · 碎片掠过 · 28mm",
+      "subject": "镜面碎片", "event": "镜面炸裂成一百二十片；碎片在慢镜头中下坠",
+      "entry": "白闪", "exit": "雨声先入", "direction": "down",
+      "transitionIn": { "type": "flash", "duration": 0.55, "color": "#f4e6dc" },
+      "qa": { "subjectScreenArea": 0.2, "maxMotion": 0.7, "priority": "high" }
+    },
+    {
+      "id": "rain-orbit", "start": 144.04, "end": 153.9, "scene": "rain", "view": "orbit",
+      "name": "逆雨", "nameEn": "REVERSE RAIN", "function": "establish",
+      "shot": "低机位环绕 · 伞下透视 · 35mm",
+      "subject": "纸伞 / 逆雨", "event": "雨从地面升向天空；纸伞在雨中缓慢旋转",
+      "entry": "墨色溶解", "exit": "切伞下视角", "direction": "right",
+      "transitionIn": { "type": "ink", "duration": 1.2 },
+      "qa": { "subjectScreenArea": 0.09, "maxMotion": 0.24 }
+    },
+    {
+      "id": "rain-wide", "start": 153.9, "end": 164.04, "scene": "rain", "view": "wide",
+      "name": "逆雨 · 伞", "nameEn": "UNDER THE UMBRELLA", "function": "follow",
+      "shot": "中景跟随 · 轻微手持 · 50mm",
+      "subject": "伞下的人影 / 发光字", "event": "伞面微光；远处纸剪影站在雨里；字幕突然变密",
+      "entry": "承接环绕", "exit": "切字城", "direction": "left",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.07, "maxMotion": 0.26 }
+    },
+    {
+      "id": "city-fly", "start": 164.04, "end": 173.6, "scene": "city", "view": "fly",
+      "name": "字城", "nameEn": "CITY OF WORDS", "function": "establish",
+      "shot": "飞行穿越 · 广角 · 24mm",
+      "subject": "字楼 / 招牌", "event": "高楼和汉字挤成峡谷；镜头在字谷中飞行",
+      "entry": "墨色溶解", "exit": "俯冲", "direction": "in",
+      "transitionIn": { "type": "ink", "duration": 1.4 },
+      "qa": { "subjectScreenArea": 0.2, "maxMotion": 0.45, "priority": "high" }
+    },
+    {
+      "id": "city-plunge", "start": 173.6, "end": 180.2, "scene": "city", "view": "plunge",
+      "name": "字城 · 坠", "nameEn": "THE FALL", "function": "follow",
+      "shot": "俯冲下坠 · 前景招牌掠过 · 24mm",
+      "subject": "街道 / 招牌", "event": "镜头从一个招牌间俯冲，坠入下方的墨池",
+      "entry": "承接飞行", "exit": "入水", "direction": "down",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.15, "maxMotion": 0.6 }
+    },
+    {
+      "id": "descent", "start": 180.2, "end": 195.0, "scene": "descent", "view": "fall",
+      "name": "坠", "nameEn": "DEEP WATER", "function": "follow",
+      "shot": "垂直坠落 · 仰拍/俯拍切换 · 28mm",
+      "subject": "气泡 / 光带 / 纸片", "event": "垂直坠入深水；气泡与光带向上掠过，纸片被撕碎",
+      "entry": "白闪", "exit": "水下仰拍", "direction": "down",
+      "transitionIn": { "type": "flash", "duration": 0.5, "color": "#e3d6c6" },
+      "qa": { "subjectScreenArea": 0.1, "maxMotion": 0.55, "priority": "high" }
+    },
+    {
+      "id": "moon-under", "start": 195.0, "end": 209.77, "scene": "moongate", "view": "under",
+      "name": "月渡 · 水", "nameEn": "UNDER THE MOON", "function": "establish",
+      "shot": "水下仰拍 · 缓慢上升 · 35mm",
+      "subject": "月亮 / 水面光斑 / 纸片", "event": "水下的巨大月亮像水母漂浮；镜头开始上浮",
+      "entry": "墨色溶解", "exit": "破水", "direction": "up",
+      "transitionIn": { "type": "ink", "duration": 1.2 },
+      "qa": { "subjectScreenArea": 0.12, "maxMotion": 0.18, "priority": "high" }
+    },
+    {
+      "id": "moon-flight", "start": 209.77, "end": 224.04, "scene": "moongate", "view": "flight",
+      "name": "月渡 · 翔", "nameEn": "TO THE MOON", "function": "follow",
+      "shot": "远景跟随 · 破水飞行 · 35mm",
+      "subject": "信 / 月亮", "event": "破水而出，信跟着纸鹤飞向月亮",
+      "entry": "白闪", "exit": "穿过月门", "direction": "up",
+      "transitionIn": { "type": "flash", "duration": 0.65, "color": "#f1f5fa" },
+      "qa": { "subjectScreenArea": 0.08, "maxMotion": 0.4 }
+    },
+    {
+      "id": "moon-portal", "start": 224.04, "end": 240.71, "scene": "moongate", "view": "portal",
+      "name": "月渡 · 穿", "nameEn": "THROUGH THE GATE", "function": "transition",
+      "shot": "第一人称穿越 · FOV 扩张 · 24mm",
+      "subject": "月门 / 门内光", "event": "穿过月亮的洞口，画面被光吞没",
+      "entry": "承接飞行", "exit": "光吞没", "direction": "in",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.25, "maxMotion": 0.5, "priority": "high" }
+    },
+    {
+      "id": "star-sea", "start": 240.71, "end": 260.71, "scene": "starsea", "view": "wide",
+      "name": "星海", "nameEn": "SEA OF STARS", "function": "establish",
+      "shot": "广角 · 摇臂上升 · 拉远 · 24mm",
+      "subject": "星尘 / 纸鹤", "event": "星光落在海面；纸鹤在星光与黑夜之间穿行",
+      "entry": "白闪", "exit": "星尘溶解", "direction": "up",
+      "transitionIn": { "type": "flash", "duration": 1.3, "color": "#f6f8fb" },
+      "qa": { "subjectScreenArea": 0.06, "maxMotion": 0.3, "priority": "high" }
+    },
+    {
+      "id": "dissolve", "start": 260.71, "end": 270.71, "scene": "starsea", "view": "dissolve",
+      "name": "光解", "nameEn": "DISSOLVE", "function": "detail",
+      "shot": "50mm 近景 · 缓慢横移",
+      "subject": "星尘 / 字迹", "event": "字从边缘开始溶解成光，红印最后熄灭",
+      "entry": "承接星海", "exit": "字成形", "direction": "left",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.1, "maxMotion": 0.16 }
+    },
+    {
+      "id": "form", "start": 270.71, "end": 280.71, "scene": "starsea", "view": "form",
+      "name": "成字", "nameEn": "I LOVE YOU", "function": "breathe", "still": true,
+      "shot": "正面固定 · 轻微推近 · 50mm",
+      "subject": "「我爱你」字形", "event": "星尘在海面聚成「我爱你」三个字，停留，然后成为终点",
+      "entry": "承接光解", "exit": "潮归", "direction": "static",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.22, "maxMotion": 0.06, "priority": "high" }
+    },
+    {
+      "id": "return", "start": 280.71, "end": 294.04, "scene": "seaDawn", "view": "return",
+      "name": "潮归", "nameEn": "THE TIDE RETURNS", "function": "detail",
+      "shot": "低机位拉远 · 缓慢后退 · 35mm",
+      "subject": "黎明的海 / 信", "event": "天光回归；海面重占画面，纸屑像雪一样落在水上",
+      "entry": "墨色溶解", "exit": "拉远", "direction": "out",
+      "transitionIn": { "type": "ink", "duration": 1.6 },
+      "qa": { "subjectScreenArea": 0.05, "maxMotion": 0.14, "priority": "high" }
+    },
+    {
+      "id": "outro", "start": 294.04, "end": 304.97, "scene": "seaDawn", "view": "outro",
+      "name": "余", "nameEn": "AFTERGLOW", "function": "breathe", "still": true,
+      "shot": "固定远景 · 极缓推进 · 35mm",
+      "subject": "海天线 / 月光", "event": "海天一线；片尾字幕开始出现，画面几乎静止",
+      "entry": "承接拉远", "exit": "黑场", "direction": "static",
+      "transitionIn": { "type": "cut", "duration": 0 },
+      "qa": { "subjectScreenArea": 0.04, "maxMotion": 0.02 }
+    },
+    {
+      "id": "end", "start": 304.97, "end": 310.16, "scene": "end", "view": "black",
+      "name": "黑", "nameEn": "BLACK", "function": "title", "still": true,
+      "shot": "纯黑 · 静止",
+      "subject": "片尾卡 / 版权行", "event": "黑场中浮出片名、Credits 与版权行",
+      "entry": "暗场下沉", "exit": "结束", "direction": "static",
+      "transitionIn": { "type": "dip", "duration": 3.0 },
+      "qa": { "subjectScreenArea": 0.02, "maxMotion": 0, "priority": "high" }
+    }
+  ],
+  "subtitles": [
+    { "id": "s01", "start": 19.9, "end": 26.5, "cn": "把一封信，交给潮汐。", "en": "I gave a letter to the tide.", "position": "bottom" },
+    { "id": "s02", "start": 32.2, "end": 38.8, "cn": "它替我，去看你。", "en": "It went to see you, for me.", "position": "bottom" },
+    { "id": "s03", "start": 45.0, "end": 51.5, "cn": "纸很轻，思念很重。", "en": "Paper is light; longing is heavy.", "position": "bottom" },
+    { "id": "s04", "start": 61.4, "end": 68.0, "cn": "月亮是唯一的地址。", "en": "The moon is the only address I know.", "position": "bottom" },
+    { "id": "s05", "start": 104.8, "end": 109.7, "cn": "有些话，停在呼吸里。", "en": "Some words stop at the breath.", "position": "bottom" },
+    { "id": "s06", "start": 111.2, "end": 118.5, "cn": "我在每一个倒影里，练习说爱你。", "en": "In every reflection, I practice love.", "position": "bottom" },
+    { "id": "s07", "start": 145.0, "end": 151.8, "cn": "雨落在相反的方向。", "en": "The rain falls the other way.", "position": "bottom" },
+    { "id": "s08", "start": 165.0, "end": 171.8, "cn": "所有的字，都朝你生长。", "en": "Every word grows toward you.", "position": "bottom" },
+    { "id": "s09", "start": 181.0, "end": 187.8, "cn": "于是我，向更深处坠落。", "en": "So I let myself fall deeper.", "position": "bottom" },
+    { "id": "s10", "start": 196.0, "end": 203.0, "cn": "在光抵达之前，我先成为光。", "en": "Before the light arrives, I become it.", "position": "bottom" },
+    { "id": "s11", "start": 224.8, "end": 231.4, "cn": "穿过月亮，就能抵达你吗？", "en": "If I cross the moon, will I reach you?", "position": "bottom" },
+    { "id": "s12", "start": 242.0, "end": 249.0, "cn": "我终于明白，爱不是抵达。", "en": "I finally learned: love is not arrival.", "position": "bottom" },
+    { "id": "s13", "start": 261.2, "end": 268.4, "cn": "它是让一封信，走了很远很远。", "en": "It is letting a letter travel very, very far.", "position": "bottom" },
+    { "id": "s14", "start": 282.0, "end": 289.2, "cn": "我爱你。", "en": "I love you.", "position": "bottom" },
+    { "id": "s15", "start": 294.8, "end": 299.6, "cn": "写给没有寄出的那封信。", "en": "For the letter that was never sent.", "position": "bottom" }
+  ],
+  "notes": "Subtitle lines are original poetic intertitles, not the copyrighted lyrics. Audio is not included in this repository."
+}
